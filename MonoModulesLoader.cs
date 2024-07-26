@@ -1,13 +1,14 @@
 ﻿using Arr.EventsSystem;
+using Arr.ModulesSystem;
 using Arr.Utils;
 using UnityEngine;
 using EventHandler = Arr.EventsSystem.EventHandler;
 
-namespace Arr.ModulesSystem
+namespace Arr.ModulesLoader
 {
-    public abstract class ModulesLoader : MonoBehaviour
+    public abstract class MonoModulesLoader : MonoBehaviour
     {
-        protected abstract BaseModule[] Modules { get; }
+        protected abstract IModule[] Modules { get; }
         
         protected virtual EventHandler EventHandler => GlobalEvents.Instance;
 
